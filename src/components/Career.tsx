@@ -15,43 +15,41 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Ikshan</h5>
+                <h4>Innovation Engineer</h4>
+                <h5>Stemrobo Technologies</h5>
               </div>
-              <h3>2020</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Built 6+ complete applications using React.js. Integrated backend
-              authentication using Node.js & MongoDB. Created responsive UI/UX
-              and designed wireframes using Figma.
+              Worked on IoT and software-based projects using Arduino, ESP32, Python, and OpenCV.
+              Integrated Blynk IoT platform for real-time monitoring through mobile dashboards.
+              Built prototypes for Smart Parking, Smart Irrigation, and safety systems.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Senior Full Stack Developer</h4>
-                <h5>Monocept (Max Life Insurance)</h5>
+                <h4>Intern</h4>
+                <h5>Indian Institute of Technology, Jammu</h5>
               </div>
-              <h3>2021</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Led two development teams on Mpro, a large-scale insurance
-              operations platform. Developed multiple modules using React.js &
-              migrated critical functionalities to Node.js microservices.
+              Developed an IoT-based Smart Parking and Irrigation System using ESP32, sensors, and Blynk IoT.
+              Created a mobile app interface to read real-time sensor values and automated water supply with relay modules.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Full Stack Developer</h4>
-                <h5>Logic Loop</h5>
+                <h4>Intern</h4>
+                <h5>InternShala</h5>
               </div>
-              <h3>NOW</h3>
+              <h3>2025</h3>
             </div>
             <p>
-              Building Solid, a proprietary low-code platform using Angular,
-              Next.js & NestJS. Delivering production-ready CMS-based projects
-              including e-commerce, CRM, and import-export automation systems.
+              Intensive training in Web Development with AI. Gained hands-on experience in HTML, CSS,
+              Bootstrap, JavaScript, React.js, PHP, and DBMS. Developed and deployed a full-stack PG Life website.
             </p>
           </div>
         </div>

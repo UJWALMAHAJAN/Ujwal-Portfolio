@@ -5,34 +5,32 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "Solid Starters",
-    category: "Low-Code Platform",
-    tools: "Angular, Next.js, NestJS, MongoDB",
-    image: "/images/Solidx.png",
+    title: "Flipkart UI Clone",
+    category: "Web Application",
+    tools: "HTML, CSS, JavaScript, React JS",
+    image: "/images/placeholder.webp",
+    link: "https://ujwalmahajan.github.io/Flipkart-UI-Clone/",
   },
   {
-    title: "Radix",
-    category: "E-Commerce",
-    tools: "Angular, Next.js, NestJS, CMS",
-    image: "/images/radix.png",
+    title: "Tic Tac Toe Game",
+    category: "Web Game",
+    tools: "HTML, CSS, JavaScript",
+    image: "/images/placeholder.webp",
+    link: "https://ujwalmahajan.github.io/Flipkart-UI-Clone/",
   },
   {
-    title: "Bond Cancellation",
-    category: "Import-Export Automation",
-    tools: "Angular, Next.js, NestJS, Workflows",
-    image: "/images/bond.png",
+    title: "Jarvis AI Virtual Assistant",
+    category: "Desktop Application",
+    tools: "Python, Speech Recognition",
+    image: "/images/placeholder.webp",
+    link: "",
   },
   {
-    title: "Sapphire",
-    category: "CRM Platform",
-    tools: "AngularJS, NestJS, PostgreSQL",
-    image: "/images/sapphire.png",
-  },
-  {
-    title: "Mpro",
-    category: "Insurance Platform",
-    tools: "React.js, Node.js, Microservices",
-    image: "/images/Maxlife.png",
+    title: "PG Life Website",
+    category: "Full Stack Platform",
+    tools: "HTML, PHP, CSS, JS, MySQL",
+    image: "/images/placeholder.webp",
+    link: "",
   },
 ];
 
@@ -111,6 +109,11 @@ const Work = () => {
                         <div className="carousel-tools">
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
+                          {project.link && (
+                            <a href={project.link} target="_blank" rel="noreferrer" style={{color: '#fff', textDecoration: 'underline', marginTop: '10px', display: 'inline-block'}} data-cursor="disable">
+                              View Project
+                            </a>
+                          )}
                         </div>
                       </div>
                     </div>
