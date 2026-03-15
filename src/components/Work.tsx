@@ -38,26 +38,9 @@ const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
-  useState(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("click", (e) => {
-        const target = e.target as HTMLElement;
-        if (target.closest("#work")) {
-          console.log("Clicked element in #work:", target);
-          console.log("Element classes:", target.className);
-          console.log("Element data-cursor:", target.getAttribute("data-cursor"));
-        }
-      });
-    }
-  });
-
   const goToSlide = useCallback(
     (index: number) => {
-      console.log("goToSlide called with index:", index);
-      if (isAnimating) {
-        console.log("Animation in progress, skipping...");
-        return;
-      }
+      if (isAnimating) return;
       setIsAnimating(true);
       setCurrentIndex(index);
       setTimeout(() => setIsAnimating(false), 500);
@@ -66,14 +49,12 @@ const Work = () => {
   );
 
   const goToPrev = useCallback(() => {
-    console.log("goToPrev called");
     const newIndex =
       currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
-    console.log("goToNext called");
     const newIndex =
       currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
