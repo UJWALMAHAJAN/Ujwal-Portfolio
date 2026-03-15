@@ -38,6 +38,19 @@ const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
+  useState(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("click", (e) => {
+        const target = e.target as HTMLElement;
+        if (target.closest("#work")) {
+          console.log("Clicked element in #work:", target);
+          console.log("Element classes:", target.className);
+          console.log("Element data-cursor:", target.getAttribute("data-cursor"));
+        }
+      });
+    }
+  });
+
   const goToSlide = useCallback(
     (index: number) => {
       console.log("goToSlide called with index:", index);
