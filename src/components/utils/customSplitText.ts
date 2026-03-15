@@ -4,9 +4,22 @@ export class CustomSplitText {
   words: HTMLElement[] = [];
   lines: HTMLElement[] = [];
 
-  constructor(target: string | HTMLElement | HTMLElement[], options: { type?: string; linesClass?: string }) {
-    const targets = typeof target === 'string' ? Array.from(document.querySelectorAll(target)) : Array.isArray(target) ? target : [target];
-    this.elements = targets as HTMLElement[];
+  constructor(target: string | HTMLElement | (string | HTMLElement)[], options: { type?: string; linesClass?: string }) {
+    let targets: HTMLElement[] = [];
+    if (typeof target === 'string') {
+      targets = Array.from(document.querySelectorAll(target)) as HTMLElement[];
+    } else if (Array.isArray(target)) {
+      target.forEach(t => {
+        if (typeof t === 'string') {
+          targets.push(...Array.from(document.querySelectorAll(t)) as HTMLElement[]);
+        } else {
+          targets.push(t as HTMLElement);
+        }
+      });
+    } else {
+      targets = [target as HTMLElement];
+    }
+    this.elements = targets;
     
     this.elements.forEach(el => {
       const text = el.innerText;

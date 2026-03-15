@@ -10,23 +10,32 @@ const Loading = ({ percent }: { percent: number }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [clicked, setClicked] = useState(false);
 
-  if (percent >= 100) {
-    setTimeout(() => {
-      setLoaded(true);
+  useEffect(() => {
+    if (percent >= 100) {
+      console.log("Loading reached 100%, starting completion sequence...");
       setTimeout(() => {
-        setIsLoaded(true);
-      }, 1000);
-    }, 600);
-  }
+        setLoaded(true);
+        console.log("setLoaded(true) called");
+        setTimeout(() => {
+          setIsLoaded(true);
+          console.log("setIsLoaded(true) called");
+        }, 1000);
+      }, 600);
+    }
+  }, [percent]);
 
   useEffect(() => {
+    console.log("useEffect [isLoaded] triggered, isLoaded:", isLoaded);
     import("./utils/initialFX").then((module) => {
       if (isLoaded) {
+        console.log("Starting initial animations...");
         setClicked(true);
         setTimeout(() => {
           if (module.initialFX) {
+            console.log("Calling initialFX()");
             module.initialFX();
           }
+          console.log("Setting setIsLoading(false)");
           setIsLoading(false);
         }, 900);
       }

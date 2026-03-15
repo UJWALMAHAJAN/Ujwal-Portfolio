@@ -2,8 +2,16 @@ import { CustomSplitText as SplitText } from "./customSplitText";
 import gsap from "gsap";
 
 export function initialFX() {
+  console.log("initialFX() executing...");
   document.body.style.overflowY = "auto";
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  const main = document.getElementsByTagName("main")[0];
+  if (main) {
+    console.log("Adding main-active class to <main>");
+    main.classList.add("main-active");
+  } else {
+    console.warn("<main> tag not found!");
+  }
+  
   gsap.to("body", {
     backgroundColor: "#0a0e17",
     duration: 0.5,
