@@ -27,7 +27,7 @@ const Navbar = () => {
   return (
     <>
       <div className="header">
-        <a href="/#" className="navbar-title" data-cursor="disable">
+        <a href={import.meta.env.BASE_URL} className="navbar-title" data-cursor="disable">
           UM
         </a>
         <a

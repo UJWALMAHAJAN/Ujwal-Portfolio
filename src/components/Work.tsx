@@ -40,7 +40,11 @@ const Work = () => {
 
   const goToSlide = useCallback(
     (index: number) => {
-      if (isAnimating) return;
+      console.log("goToSlide called with index:", index);
+      if (isAnimating) {
+        console.log("Animation in progress, skipping...");
+        return;
+      }
       setIsAnimating(true);
       setCurrentIndex(index);
       setTimeout(() => setIsAnimating(false), 500);
@@ -49,12 +53,14 @@ const Work = () => {
   );
 
   const goToPrev = useCallback(() => {
+    console.log("goToPrev called");
     const newIndex =
       currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
     goToSlide(newIndex);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
+    console.log("goToNext called");
     const newIndex =
       currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
     goToSlide(newIndex);
