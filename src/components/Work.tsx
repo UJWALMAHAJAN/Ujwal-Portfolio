@@ -8,7 +8,7 @@ const projects = [
     title: "Flipkart UI Clone",
     category: "Web Application",
     tools: "HTML, CSS, JavaScript, React JS",
-    image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
+    image: `${import.meta.env.BASE_URL}images/preview.png`,
     link: "https://ujwalmahajan.github.io/Flipkart-UI-Clone/",
   },
   {
@@ -16,21 +16,21 @@ const projects = [
     category: "Web Game",
     tools: "HTML, CSS, JavaScript",
     image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
-    link: "https://ujwalmahajan.github.io/Flipkart-UI-Clone/",
+    link: "https://ujwalmahajan.github.io/Tic-Tac-Toe/",
   },
   {
     title: "Jarvis AI Virtual Assistant",
     category: "Desktop Application",
     tools: "Python, Speech Recognition",
     image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
-    link: "",
+    link: "https://github.com/ujwalmahajan/Jarvis-AI",
   },
   {
     title: "PG Life Website",
     category: "Full Stack Platform",
     tools: "HTML, PHP, CSS, JS, MySQL",
     image: `${import.meta.env.BASE_URL}images/placeholder.webp`,
-    link: "",
+    link: "https://github.com/ujwalmahajan/PG-Life",
   },
 ];
 
